@@ -1,0 +1,9 @@
+<h1>{{ customer.name }}</h1>
+
+<h2>Orders:</h2>
+{% for order in customer.orders_info.orders %}
+    <p>{{ order.product.name }} - {{ order.product.price }}</p>
+{% endfor %}
+
+<h2>Total cost:</h2>
+<p>{{ customer.orders_info.total_cost }}</p>
